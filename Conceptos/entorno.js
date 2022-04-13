@@ -3,3 +3,4 @@ let web = process.env.WEB || "No web";
 
 console.log("hola", names);
 console.log("web", web);
+console.log("probando NODEMON");
