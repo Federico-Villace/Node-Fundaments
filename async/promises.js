@@ -18,10 +18,3 @@ const talk = (callback) => {
     callback();
   }, 1000);
 };
-
-console.log("Initiating process.");
-hello("carlos", (name) => {
-  bye(name, () => {
-    return console.log("ending process");
-  });
-});
