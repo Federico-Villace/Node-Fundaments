@@ -12,7 +12,7 @@ const bye = (name) => {
     setTimeout(() => {
       console.log("Bye ", name);
       resolve();
-    }, 1500);
+    }, 1000);
   });
 };
 
@@ -20,7 +20,8 @@ const talk = (name) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("bla bla bla bla");
-      resolve(name);
+
+      reject("There is an error");
     }, 1000);
   });
 };
@@ -32,4 +33,7 @@ hello("carlos")
   .then(bye)
   .then(() => {
     console.log("terminando el proceso");
+  })
+  .catch((error) => {
+    console.error(error);
   });
